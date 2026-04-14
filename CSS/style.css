@@ -1,4 +1,102 @@
 
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body {
+    padding: 60px;
+
+}
+
+.transforms, .animations{
+    margin: 80px 0;
+}
+
+.transforms > h2, .animations > h2 {
+    margin-bottom: 80px;
+    /* transform: skew(35deg); */
+}
+
+.box1 {
+    background-color: red;
+    width: 80px;
+    height: 80px;
+    
+    /* transform: translate(125px, ´160px); */
+    /* transform: scale(2);translate: (150px,60px); */
+    transition: 0.6s;
+}
+
+.box1 {
+    transform: scale(2);
+}
+
+.box1:hover {
+    transform: scale(2) rotate(360deg);
+}
+
+p {
+    margin: 80px 0;
+}
+
+.text-cont {
+    margin: 80px 0;
+    padding: 20px;
     background-color: aquamarine;
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+}
+
+.text-cont > a {
+    color: blueviolet;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.6s;
+}
+
+.text-cont > a:hover {
+    transform: scale(1.2);
+}
+
+
+.box2 {
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    /* animation: movechangecolor 4s;  */
+    animation-name: movechangecolor;
+    animation-duration: 4s;
+    /* animation-delay: 2s; */
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /* animation-timing-function: ; */
+    animation-timing-function: ease-in-out;
+}
+
+.box2 > :hover {
+
+}
+
+@keyframes movechangecolor {
+    
+    0% {
+        transform: translateX(0px) scale(1);
+        background-color: blue;
+        border-radius: 50%;
+    }
+
+    
+    75% {
+        background-color: red;
+        transform: translateX(200p) scale(2);
+    }
+    
+    100% {
+        transform: translateX(400px) scale(1.5);
+        background-color: chartreuse;
+    }
 }
